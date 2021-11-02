@@ -1,0 +1,130 @@
+
+        <div class="navbar">
+            <div class="container">
+                <a class="logo" href="index.html">OceaniaBreaks</a>
+                
+                <img id ="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Drop down menu">  
+                
+                <nav>
+                    <img id ="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Exit drop down menu">
+                    <ul class="primary-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Breaks</a></li>
+                        <li><a href="#">Hits Meseum</a></li>
+                        <li>
+                            <a href="#">Socials</a>
+                            <span class ="fa fa-plus"></span>
+                            <ul>
+                                <li><a href="https://www.tiktok.com/@oceaniabreaks">TikTok</a></li>
+                                <li><a href="https://www.facebook.com/groups/oceaniabreaksv2">Facebook</a></li>
+                                <li><a href="#">Youtube</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="secondary-nav">
+                        <span class = "fa fa-user"></span>
+                        <span class = "fa fa-shopping-cart"></span>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <section class="hero">
+            <div class="container">
+                <img src="images/OceaniaBreaks.jpg" alt="OceaniaBreaksLogo">
+                <div class="middle-col">
+                    <p class="subhead">Welcome To OceaniaBreaks NZ</p>
+                    <h1>The holy grail of Sports Card Breaks</h1>
+                    <div class="hero-cta">
+                        <a href="#" class="primary-cta">    Football Breaks    </a>
+                        <a href="#" class="primary-cta">    Basketball Breaks    </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <img src="images/1200px-Topps_Logo.svg.png" alt="Topps logo">
+                <img src="images/Panini_new.png" alt="Panini Logo">
+                <img src="images/1200px-Upper_Deck_Logo.svg.png" alt="Upper Deck Logo">
+                <img src="images/Leaf_cards_logo.png" alt="Leaf_cards_logo logo">
+            </div>
+        </section>
+
+        <section class="paragraph-section">
+            <div class="container">
+                <ul>
+                    <h1>Looking for Football, or NBA Breaks?</h1> 
+                    <p>Oceania Breaks acquire all of our inventory from the best suppliers, meaning we pass the best deals onto you.</p>
+                </ul>
+            </div>
+        </section>
+
+        <section class="two-photos">
+            <div class="container">
+                <div class="breaks-photo">
+                    <img src="images/merlin.jpg" class= "first-photo" alt="Sports Card Breaks">
+                    <div class="centered">
+                        <h1>Sports Sports Card Breaks</h1>
+                        <p>In Stock</p>
+                    </div>
+                </div>
+                <div class="singles-photo">
+                    <img src="images/chriswood.jpg" class= "second-photo" alt="Shop Trading Card Singles">
+                    <div class="singles-photo-text">
+                        <h1>Shop Sports Card Singles</h1>
+                        <p>In Stock</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class = "youtube-videos">
+            <h1>Some of our favourite football videos!</h1>
+            <iframe width="420" height="315" class="video1"
+            src="https://www.youtube.com/embed/bKOTKHtbM54"></iframe>
+
+            <iframe width="420" height="315" class="video2"
+            src="https://www.youtube.com/embed/QsUYgszRPzc"></iframe>
+        </section>
+
+
+        <script src = "https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
+
+        <script>
+
+
+
+            const mobileBtn = document.getElementById('mobile-cta')
+                nav = document.querySelector('nav')
+                mobileBtnExit = document.getElementById('mobile-exit');
+            
+            mobileBtn.addEventListener('click', () =>{
+                nav.classList.add('menu-btn');
+            })
+
+            mobileBtnExit.addEventListener('click', () =>{
+                nav.classList.remove('menu-btn');
+            })
+
+
+        </script>
+
+
+
+
+
+
+/* https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535 
+    https://boostedusa.com/
+    http://sachinchoolur.github.io/lightslider/
+    https://splidejs.com/
+    https://www.youtube.com/watch?v=ku_97a6Bgkg
+    https://www.youtube.com/watch?v=woL0YlCqO64
+
+    https://www.youtube.com/watch?v=kpAt25cOBrU&ab_channel=iEatWebsites
+    https://glidejs.com/docs/setup/
+*/
