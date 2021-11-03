@@ -90,24 +90,43 @@
             src="https://www.youtube.com/embed/QsUYgszRPzc"></iframe>
         </section>
 
-        <section class = "image-carousel">
-            <div class = "container">
+        
+            <div class ="container">
                 <div class="glide">
                     <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
-                        <li class="glide__slide">0</li>
-                        <li class="glide__slide">1</li>
-                        <li class="glide__slide">2</li>
+                        <img src="images/merlin.jpg" class= "glide__slide" alt="Sports Card Breaks">
+                        <img src="images/merlin.jpg" class= "glide__slide" alt="Sports Card Breaks">
+                        <img src="images/merlin.jpg" class= "glide__slide" alt="Sports Card Breaks">
+                        <img src="images/merlin.jpg" class= "glide__slide" alt="Sports Card Breaks">
                     </ul>
                     </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                      </div>
                 </div>
             </div>
-        </section>
+        <script src = "https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
 
         <script>
-            src = "https://cdn.jsdelivr.net/npm/@glidejs/glide"
+            const config = {
+                type: 'carousel',
+                perView: 4,
+                breakpoints: {
+                    800: {
+                    perView: 2
+                    }
+                }
+            }
 
+            let info = document.querySelectorAll(".glide_slides");
+            console.log(info);
+            info.innerHTML = "Hi";
+
+
+            new Glide('.glide',config).mount()
 
             const mobileBtn = document.getElementById('mobile-cta')
                 nav = document.querySelector('nav')
@@ -125,9 +144,6 @@
         </script>
 
 
-
-fdsfsd
-
 /* https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535 
     https://boostedusa.com/
     http://sachinchoolur.github.io/lightslider/
@@ -137,4 +153,5 @@ fdsfsd
 
     https://www.youtube.com/watch?v=kpAt25cOBrU&ab_channel=iEatWebsites
     https://glidejs.com/docs/setup/
+    install heroku cli before doing commands
 */
