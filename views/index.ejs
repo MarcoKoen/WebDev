@@ -112,8 +112,10 @@
 
         <script>
 
+           // $.getJSON("https://mighty-river-48400.herokuapp.com/api/photos")
+
             (async() => {
-                let firstfetch = await fetch("https://mighty-river-48400.herokuapp.com/api/photos");
+                let firstfetch = await fetch("https://mighty-river-48400.herokuapp.com/api/data");
                 let oceaniabreaksdata = await firstfetch.json();
                 console.log(oceaniabreaksdata);
 
