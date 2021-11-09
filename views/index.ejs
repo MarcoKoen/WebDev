@@ -113,7 +113,7 @@
                 </div>
                 <div class="custom-notification-content-wrapper">
                   <p class="custom-notification-content">
-                    Caleb Stephens - Dunedin<br>Purchased <b>4</b> Anal Lube   
+                    Mr.Nagarajan - Banglore<br>Purchased <b>4</b> Product Name   
                     <small>1 hour ago</small>
                   </p>
                 </div>
@@ -156,14 +156,9 @@
 
                 let glide = new Glide('.glide',config);                    
                 glide.mount();
-
-
             })();
 
-            setInterval(function(){ $(".custom-social-proof").stop().slideToggle('slow'); }, 8000);
-            $(".custom-close").click(function() {
-                $(".custom-social-proof").stop().slideToggle('slow');
-            });
+           
 
 
             const mobileBtn = document.querySelector('#mobile-cta')
@@ -177,6 +172,11 @@
             mobileBtnExit.addEventListener('click', () =>{
                 nav.classList.remove('menu-btn');
             })
+
+            setInterval(function(){ $(".custom-social-proof").stop().slideToggle('slow'); }, 8000);
+            $(".custom-close").click(function() {
+                $(".custom-social-proof").stop().slideToggle('slow');
+            });
             
             
 
