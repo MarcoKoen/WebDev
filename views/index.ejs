@@ -109,7 +109,6 @@
             <div class="custom-notification">
               <div class="custom-notification-container">
                 <div class="custom-notification-image-wrapper">
-                 
                 </div>
                 <div class="custom-notification-content-wrapper">
                   <p class="custom-notification-content">
@@ -123,27 +122,37 @@
           </section>
 
         <script>
-           let nameSales = ['Kate','Caleb','Matilda','Marco','Ben','Josh','Artem','Zach','Ruben'];
+          
+          
+          
+           let nameSales = ['Kate','Caleb','Matilda','Marco','Ben','Josh','Artem','Zach','Ruben','Tom'];
            let productName = [{id:"0", name:"Prizm Hobby Box", image:"images/prizm.webp"},
                               {id:"1", name:"Chronicles Hobby Box", image:"images/chronicles.jpg"}, 
-                              {id:"2", name:"Euro Mosaic Hobby Box", image:"images/mosaic.jpg"}, 
+                              {id:"2", name:"Euro Mosaic Hobby Box", image:"images/Mosaic.png"}, 
                               {id:"3", name:"Immaculate Hobby Box", image:"images/immaculate.jpg"} 
                             ];
             let timeArray = ['1 hour ago', '30 minutes ago', '2 hours ago', '1 minute ago', 'right now']
 
-           let notificationText = document.querySelector(".custom-notification-content");
-           let productPhoto = document.querySelector(".custom-notification-image-wrapper");
-           let productPhotoSrc = document.createElement("img");
+            
 
-           let randomName = Math.floor(Math.random() * nameSales.length);
-           let randomProduct = Math.floor(Math.random() * productName.length);
+            setInterval(function(){
+                let notificationText = document.querySelector(".custom-notification-content");
+                let productPhoto = document.querySelector(".custom-notification-image-wrapper");
+                let productPhotoSrc = document.createElement("img");
+                let randomName = Math.floor(Math.random() * nameSales.length);
+                let randomProduct = Math.floor(Math.random() * productName.length);
 
-           productPhotoSrc.src = productName[randomProduct].image;
-           console.log(productName[randomProduct].image);
-           productPhoto.append(productPhotoSrc);
+                productPhoto.append(productPhotoSrc);
+                notificationText.innerHTML = nameSales[randomName] + " Purchased " + productName[randomProduct].name;
 
-           console.log(randomName)
-           notificationText.innerHTML = nameSales[randomName] + " Purchased " + productName[randomProduct].name;
+                document.getElementById(productPhotoSrc).src = productName[randomProduct].image;
+                console.log(productName[randomProduct].image);
+
+                console.log(randomName)
+
+            },8500);
+            
+           
             
 
             let carouselClass = document.querySelector(".glide__slides");
