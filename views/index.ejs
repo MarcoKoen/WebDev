@@ -91,20 +91,40 @@
         </section>
 
         
-            <div class ="container">
-                <div class="glide">
-                    <div class="glide__track" data-glide-el="track">
+        <section class = "carousel">
+            <h1>Browse our best hits so far!</h1>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">                        
                     </ul>
-                    </div>
-                    <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-                      </div>
                 </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                    </div>
+                </div>
+        </section>
+
+        <section class="custom-social-proof">
+            <div class="custom-notification">
+              <div class="custom-notification-container">
+                <div class="custom-notification-image-wrapper">
+                  <img src="https://tidings.today/wp-content/uploads/2018/08/tidings-today-logo-fav.png">
+                </div>
+                <div class="custom-notification-content-wrapper">
+                  <p class="custom-notification-content">
+                    Caleb Stephens - Dunedin<br>Purchased <b>4</b> Anal Lube   
+                    <small>1 hour ago</small>
+                  </p>
+                </div>
+              </div>
+              <div class="custom-close"></div>
             </div>
+          </section>
 
         <script>
+
+            
 
             let carouselClass = document.querySelector(".glide__slides");
 
@@ -139,6 +159,11 @@
 
 
             })();
+
+            setInterval(function(){ $(".custom-social-proof").stop().slideToggle('slow'); }, 8000);
+            $(".custom-close").click(function() {
+                $(".custom-social-proof").stop().slideToggle('slow');
+            });
 
 
             const mobileBtn = document.querySelector('#mobile-cta')

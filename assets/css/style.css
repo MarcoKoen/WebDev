@@ -249,6 +249,12 @@ nav .primary-nav li a:hover{
     width: 100%;
 }
 
+.carousel h1 {
+    display: flex;
+    justify-content: center;
+
+}
+
 
 
 
@@ -289,4 +295,5 @@ nav .primary-nav li a:hover{
         flex-direction: row;
     }
 
+    
 }
