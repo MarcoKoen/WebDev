@@ -109,11 +109,11 @@
             <div class="custom-notification">
               <div class="custom-notification-container">
                 <div class="custom-notification-image-wrapper">
-                  <img src="https://tidings.today/wp-content/uploads/2018/08/tidings-today-logo-fav.png">
+                 
                 </div>
                 <div class="custom-notification-content-wrapper">
                   <p class="custom-notification-content">
-                    Mr.Nagarajan - Banglore<br>Purchased <b>4</b> Product Name   
+                      
                     <small>1 hour ago</small>
                   </p>
                 </div>
@@ -123,7 +123,27 @@
           </section>
 
         <script>
+           let nameSales = ['Kate','Caleb','Matilda','Marco','Ben','Josh','Artem','Zach','Ruben'];
+           let productName = [{id:"0", name:"Prizm Hobby Box", image:"images/prizm.webp"},
+                              {id:"1", name:"Chronicles Hobby Box", image:"images/chronicles.jpg"}, 
+                              {id:"2", name:"Euro Mosaic Hobby Box", image:"images/mosaic.jpg"}, 
+                              {id:"3", name:"Immaculate Hobby Box", image:"images/immaculate.jpg"} 
+                            ];
+            let timeArray = ['1 hour ago', '30 minutes ago', '2 hours ago', '1 minute ago', 'right now']
 
+           let notificationText = document.querySelector(".custom-notification-content");
+           let productPhoto = document.querySelector(".custom-notification-image-wrapper");
+           let productPhotoSrc = document.createElement("img");
+
+           let randomName = Math.floor(Math.random() * nameSales.length);
+           let randomProduct = Math.floor(Math.random() * productName.length);
+
+           productPhotoSrc.src = productName[randomProduct].image;
+           console.log(productName[randomProduct].image);
+           productPhoto.append(productPhotoSrc);
+
+           console.log(randomName)
+           notificationText.innerHTML = nameSales[randomName] + " Purchased " + productName[randomProduct].name;
             
 
             let carouselClass = document.querySelector(".glide__slides");
