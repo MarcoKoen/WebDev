@@ -94,11 +94,7 @@
             <div class ="container">
                 <div class="glide">
                     <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <img src="images/merlin.jpg" class= "glide__slide" alt="Sports Card Breaks">
-                        <img src="images/merlin.jpg" class= "glide__slide" alt="Sports Card Breaks">
-                        <img src="images/merlin.jpg" class= "glide__slide" alt="Sports Card Breaks">
-                        <img src="images/merlin.jpg" class= "glide__slide" alt="Sports Card Breaks">
+                    <ul class="glide__slides">                        
                     </ul>
                     </div>
                     <div class="glide__arrows" data-glide-el="controls">
@@ -107,37 +103,43 @@
                       </div>
                 </div>
             </div>
-        <script src = "https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-
 
         <script>
 
-           // $.getJSON("https://mighty-river-48400.herokuapp.com/api/photos")
+            let carouselClass = document.querySelector(".glide__slides");
 
             (async() => {
-                let firstfetch = await fetch("https://mighty-river-48400.herokuapp.com/api/data");
-                let oceaniabreaksdata = await firstfetch.json();
-                console.log(oceaniabreaksdata);
+                const config = {
+                    type: 'carousel',
+                    perView: 4,
+                    breakpoints: {
+                        800: {
+                        perView: 2
+                        }
+                    }
+                }
+                
+                let firstFetch = await fetch("https://mighty-river-48400.herokuapp.com/api/data");
+                let oceaniaBreaksData = await firstFetch.json();
+                let oceaniaArray = oceaniaBreaksData.Oceaniabreaks;
+                console.log(oceaniaArray);
+
+                oceaniaArray.forEach((element, index) => {
+                    let nextPhoto = element.image;
+                    let li = document.createElement("li");;
+                    let img = document.createElement('img');
+                    img.className = "glide__slide";
+                    img.src = ("https://mighty-river-48400.herokuapp.com/img/" + nextPhoto);
+                    li.append(img)
+                    carouselClass.append(li);
+                });
+
+                let glide = new Glide('.glide',config);                    
+                glide.mount();
 
 
             })();
-            console.log("THE");
 
-
-
-            const config = {
-                type: 'carousel',
-                perView: 4,
-                breakpoints: {
-                    800: {
-                    perView: 2
-                    }
-                }
-            }
-
-
-
-            new Glide('.glide',config).mount()
 
             const mobileBtn = document.querySelector('#mobile-cta')
                 nav = document.querySelector('nav')
@@ -153,9 +155,6 @@
             
             
 
-        </script>
-
-
 /* https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535 
    https://boostedusa.com/
     http://sachinchoolur.github.io/lightslider/
@@ -167,3 +166,5 @@
     https://glidejs.com/docs/setup/
     install heroku cli before doing commands
 */
+        </script>
+
