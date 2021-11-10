@@ -97,6 +97,7 @@ ul {
     flex-direction: column;
     color: yellow;
     text-decoration: none;
+
 }
 
 .middle-col .subhead {
@@ -164,7 +165,7 @@ ul {
 }
 
 .two-photos .centered ,.singles-photo-text{
-    position: absolute;
+    position: relative;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -173,6 +174,7 @@ ul {
     padding: .1em .1em;
     border-radius: 5em;
     font-weight: bold;
+    position: relative;
 }
 .breaks-photo , .singles-photo {
     width: 100%;
@@ -193,8 +195,8 @@ ul {
 }
 
 
-.two-photos .singles-photo-text{
-    position: absolute;
+.two-photos .container h1{
+    position: relative;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -401,5 +403,25 @@ nav .primary-nav li a:hover{
         .two-photos .container h1 {
             position: relative;
         }
+
+        .paragraph-section .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 15%;
+            font-size: 20px;
+        }
+
+        .middle-col .subhead {
+            font-size: 40px;
+            font-weight: 800;
+        }
+        .middle-col h1  {
+            font-weight: 700;
+            font-size: 30px;
+        }
+       
         
+
     }
