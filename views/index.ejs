@@ -109,7 +109,9 @@
             <div class="custom-notification">
               <div class="custom-notification-container">
                 <div class="custom-notification-image-wrapper">
+                    <img src= "images/prizm.webp" class="notif-image">
                 </div>
+                
                 <div class="custom-notification-content-wrapper">
                   <p class="custom-notification-content">
                       
@@ -133,26 +135,21 @@
                             ];
             let timeArray = ['1 hour ago', '30 minutes ago', '2 hours ago', '1 minute ago', 'right now']
 
-            
+
+
+            let notificationText = document.querySelector(".custom-notification-content");
+            let productPhoto = document.querySelector(".custom-notification-image-wrapper");
+            let productPhotoSrc = document.querySelector(".notif-image");
 
             setInterval(function(){
-                let notificationText = document.querySelector(".custom-notification-content");
-                let productPhoto = document.querySelector(".custom-notification-image-wrapper");
-                let productPhotoSrc = document.createElement("img");
+                
                 let randomName = Math.floor(Math.random() * nameSales.length);
                 let randomProduct = Math.floor(Math.random() * productName.length);
-
-                productPhoto.append(productPhotoSrc);
+                productPhotoSrc.src = productName[randomProduct].image;
                 notificationText.innerHTML = nameSales[randomName] + " Purchased " + productName[randomProduct].name;
-
-                document.getElementById(productPhotoSrc).src = productName[randomProduct].image;
-                console.log(productName[randomProduct].image);
-
-                console.log(randomName)
-
-            },8500);
+            },7500);
             
-           
+            
             
 
             let carouselClass = document.querySelector(".glide__slides");
