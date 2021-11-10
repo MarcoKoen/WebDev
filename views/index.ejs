@@ -64,20 +64,9 @@
 
         <section class="two-photos">
             <div class="container">
-                <div class="breaks-photo">
-                    <img src="images/merlin.jpg" class= "first-photo" alt="Sports Card Breaks">
-                    <div class="centered">
-                        <h1>Sports Sports Card Breaks</h1>
-                        <p>In Stock</p>
-                    </div>
-                </div>
-                <div class="singles-photo">
-                    <img src="images/chriswood.jpg" class= "second-photo" alt="Shop Trading Card Singles">
-                    <div class="singles-photo-text">
-                        <h1>Shop Sports Card Singles</h1>
-                        <p>In Stock</p>
-                    </div>
-                </div>
+                <%- include('partials/card.ejs',{"text":"Sports Sports Card Breaks","image":"merlin"}) %>
+                <%- include('partials/card.ejs',{"text":"Shop Sports Card Singles","image":"chriswood"}) %>
+                
             </div>
         </section>
 
@@ -87,7 +76,7 @@
             src="https://www.youtube.com/embed/bKOTKHtbM54"></iframe>
 
             <iframe width="420" height="315" class="video2"
-            src="https://www.youtube.com/embed/QsUYgszRPzc"></iframe>
+            src="https://www.youtube.com/embed/ZWYGRehfmR4"></iframe>
         </section>
 
         
@@ -115,7 +104,7 @@
                 <div class="custom-notification-content-wrapper">
                   <p class="custom-notification-content">
                       
-                    <small>1 hour ago</small>
+                   
                   </p>
                 </div>
               </div>
@@ -125,33 +114,6 @@
 
         <script>
           
-          
-          
-           let nameSales = ['Kate','Caleb','Matilda','Marco','Ben','Josh','Artem','Zach','Ruben','Tom'];
-           let productName = [{id:"0", name:"Prizm Hobby Box", image:"images/prizm.webp"},
-                              {id:"1", name:"Chronicles Hobby Box", image:"images/chronicles.jpg"}, 
-                              {id:"2", name:"Euro Mosaic Hobby Box", image:"images/Mosaic.png"}, 
-                              {id:"3", name:"Immaculate Hobby Box", image:"images/immaculate.jpg"} 
-                            ];
-            let timeArray = ['1 hour ago', '30 minutes ago', '2 hours ago', '1 minute ago', 'right now']
-
-
-
-            let notificationText = document.querySelector(".custom-notification-content");
-            let productPhoto = document.querySelector(".custom-notification-image-wrapper");
-            let productPhotoSrc = document.querySelector(".notif-image");
-
-            setInterval(function(){
-                
-                let randomName = Math.floor(Math.random() * nameSales.length);
-                let randomProduct = Math.floor(Math.random() * productName.length);
-                productPhotoSrc.src = productName[randomProduct].image;
-                notificationText.innerHTML = nameSales[randomName] + " Purchased " + productName[randomProduct].name;
-            },7500);
-            
-            
-            
-
             let carouselClass = document.querySelector(".glide__slides");
 
             (async() => {
@@ -199,7 +161,38 @@
                 nav.classList.remove('menu-btn');
             })
 
-            setInterval(function(){ $(".custom-social-proof").stop().slideToggle('slow'); }, 8000);
+            let nameSales = ['Kate','Caleb','Matilda','Marco','Ben','Josh','Artem','Zach','Ruben','Tom'];
+           let productName = [{id:"0", name:"Prizm Hobby Box", image:"images/prizm.webp"},
+                              {id:"1", name:"Chronicles Hobby Box", image:"images/chronicles.jpg"}, 
+                              {id:"2", name:"Euro Mosaic Hobby Box", image:"images/Mosaic.png"}, 
+                              {id:"3", name:"Immaculate Hobby Box", image:"images/immaculate.jpg"} 
+                            ];
+            let timeArray = ['1 hour ago', '30 minutes ago', '2 hours ago', '1 minute ago', 'right now'];
+
+
+
+            let notificationText = document.querySelector(".custom-notification-content");
+            let productPhoto = document.querySelector(".custom-notification-image-wrapper");
+            let productPhotoSrc = document.querySelector(".notif-image");
+/*
+            setInterval(function(){
+                
+                
+
+            },8000);*/
+
+            setInterval(function(){ $(".custom-social-proof").stop().slideToggle('slow', () => {
+                if($(".custom-social-proof").is(":hidden")){
+                    let randomName = Math.floor(Math.random() * nameSales.length);
+                    let randomProduct = Math.floor(Math.random() * productName.length);
+                    let randomTime = Math.floor(Math.random() * timeArray.length);
+                    productPhotoSrc.src = productName[randomProduct].image;
+                    notificationText.innerHTML = nameSales[randomName] + " Purchased  <br>" + productName[randomProduct].name + "<br>" + timeArray[randomTime];
+                }
+            }); }, 7000);
+          
+          
+          
             $(".custom-close").click(function() {
                 $(".custom-social-proof").stop().slideToggle('slow');
             });
