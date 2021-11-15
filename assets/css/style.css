@@ -133,14 +133,14 @@ ul {
     width: 100%;
     flex-direction: row;
     background-color: black;
-    padding: 15px;
     justify-content: space-evenly;
+
 }
 .features-section img {
     max-height: 100px;
     max-width: 100px;
-    padding: 25px;
     background-color: black;
+    padding: 15px;
 }
 
 .paragraph-section{
@@ -153,7 +153,6 @@ ul {
 .two-photos img {
     max-width: 100%;
 }
-
 .two-photos{padding:10px}
 
 .two-photos .container {
@@ -427,6 +426,16 @@ nav .primary-nav li a:hover{
         .middle-col h1  {
             font-weight: 700;
             font-size: 30px;
+        }
+
+        .features-section{padding-bottom: 50px;}
+        .paragraph-section{padding-top: 30px;}
+
+        .features-section img {
+            padding-left: 100px;
+            padding-right: 100px;
+            height: 150px;
+            width: 100%;
         }
        
         
