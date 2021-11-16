@@ -1,24 +1,15 @@
 
-@font-face {
-    font-family: 'Poppinss';
-    src: url("../webfonts/Poppins-Regular.ttf");
 
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url("../webfonts/Poppins-SemiBold.ttf");
-}
 
 body {
-    font-family: 'Poppinss';
+    font-family: 'Poppins', sans-serif;
     background: black;
     margin: 0px;
     padding: 0px;
     color: white;
-
 }
 
+.secondary-nav , .primary-nav{color: black;}
 .hero img {
 width: 100%;
 height: 100%;
@@ -58,7 +49,7 @@ nav {
     place-content: space-between;
 }
 .hero {
-    position: relative;
+    
     padding-top: 80px;
 }
 
@@ -70,6 +61,7 @@ nav {
     align-items: center;
     justify-content: top;
     flex-direction: column;
+    position: relative;
 
 }
 
@@ -127,14 +119,19 @@ ul {
     border-radius: 20em;
 }
 .features-section {
-    display: flex;
     height: 8%;
     width: 100%;
     flex-direction: row;
     background-color: black;
-    justify-content: space-evenly;
-
+    
 }
+
+.features-section .container {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
 .features-section img {
     max-height: 100px;
     max-width: 100px;
@@ -160,7 +157,6 @@ ul {
     text-align: center;
     color: white;
     flex-direction: column;
-    position: relative;
     justify-content: center;
     font-size: large;
     letter-spacing: 1px;
@@ -169,9 +165,11 @@ ul {
     height: 100%;
 }
 
-.two-photos .centered ,.singles-photo-text{
-    position: relative;
-    top: 20%;
+
+
+.two-photos .centered {
+    position: absolute;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -179,13 +177,13 @@ ul {
     padding: .1em .1em;
     border-radius: 5em;
     font-weight: bold;
-    position: relative;
 }
 .breaks-photo , .singles-photo {
     width: 100%;
     height: 100%;
     overflow: hidden;
     aspect-ratio: 1 / 1;
+    position: relative;
 }
 
 .first-photo , .second-photo{
@@ -404,11 +402,18 @@ nav .primary-nav li a:hover{
         .two-photos .container{
             display: flex;
             flex-direction: row;
-        }
-        .two-photos .container h1 {
-            position: relative;
+            justify-content: space-evenly;
+            height: 650px;
         }
 
+        .two-photos .centered {
+            top: 50%;
+        }
+
+        .two-photos, img {
+            max-width: 100%;
+        }
+        
         .paragraph-section .container{
             display: flex;
             flex-direction: column;
@@ -431,13 +436,22 @@ nav .primary-nav li a:hover{
         .paragraph-section{padding-top: 30px;}
 
         .features-section img {
-            padding-left: 100px;
-            padding-right: 100px;
+            justify-content: space-evenly;
             height: 150px;
             width: 100%;
+            
         }
-       
+        .videos{
+            flex-direction: row;
+        }
+
+        .video1 , .video2 {
+            width: 550px;
+            height: 350px;
+        }
+
         
+
         
 
     }

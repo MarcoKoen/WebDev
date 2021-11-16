@@ -13,7 +13,7 @@
                         <li><a href="#">Hits Meseum</a></li>
                         <li>
                             <a href="#">Socials</a>
-                            <span class ="fa fa-plus"></span>
+                            <span class ="fas fa-plus"></span>
                             <ul>
                                 <li><a href="https://www.tiktok.com/@oceaniabreaks">TikTok</a></li>
                                 <li><a href="https://www.facebook.com/groups/oceaniabreaksv2">Facebook</a></li>
@@ -72,11 +72,13 @@
 
         <section class = "youtube-videos">
             <h1>Some of our favourite football videos!</h1>
+        <div class="videos">
             <iframe width="420" height="315" class="video1"
             src="https://www.youtube.com/embed/bKOTKHtbM54"></iframe>
 
             <iframe width="420" height="315" class="video2"
             src="https://www.youtube.com/embed/ZWYGRehfmR4"></iframe>
+        </div>
         </section>
 
         
@@ -160,7 +162,7 @@
                 nav.classList.remove('menu-btn');
             })
 
-            let nameSales = ['Kate','Caleb','Matilda','Marco','Ben','Josh','Artem','Zach','Ruben','Tom'];
+            let nameSales = ['Kate','Caleb','Matilda','Marco','Ben','Josh','Artem','Zach','Ruben','Tom','Carlson'];
            let productName = [{id:"0", name:"Prizm Hobby Box", image:"images/prizm.webp"},
                               {id:"1", name:"Chronicles Hobby Box", image:"images/chronicles.jpg"}, 
                               {id:"2", name:"Euro Mosaic Hobby Box", image:"images/Mosaic.png"}, 
@@ -182,7 +184,7 @@
                     productPhotoSrc.src = productName[randomProduct].image;
                     notificationText.innerHTML = nameSales[randomName] + " Purchased  <br>" + productName[randomProduct].name + "<br>" + timeArray[randomTime];
                 }
-            }); }, 7000);
+            }); }, 3000);
           
           
           
