@@ -451,27 +451,18 @@ nav .primary-nav li a:hover{
             height: 350px;
         }
 
-       
-        .primary-nav li {
-            position: relative;
-        }
-
-        .fas.fa-plus:hover .primary-nav ul {
-            background-color: violet;
-        }
-
-        .dropdown__menu {
+        .primary-nav li:hover .dropdown__menu ul li {     
             display: block;
-            position:absolute;
             left: 0;
             top: 100%;
             background-color: white;
         }
 
-        .dropdown__menu ul {
-            display: block;
-        }
+      .dropdown__menu ul li{
+          display:none ;
+      }
         
+       
         
         
         
