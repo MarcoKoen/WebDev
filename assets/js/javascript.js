@@ -1,4 +1,5 @@
 
+            /*Carousel section, setting conditions fetching information from the api and appending to the carousel */
             let carouselClass = document.querySelector(".glide__slides");
 
             (async() => {
@@ -6,7 +7,7 @@
                     type: 'carousel',
                     perView: 4,
                     breakpoints: {
-                        800: {
+                        1020: {
                         perView: 2
                         }
                     }
@@ -33,7 +34,7 @@
 
            
 
-
+            /* Mobile right side navbar*/ 
             const mobileBtn = document.querySelector('#mobile-cta')
                 nav = document.querySelector('nav')
                 mobileBtnExit = document.querySelector('#mobile-exit');
@@ -46,6 +47,8 @@
                 nav.classList.remove('menu-btn');
             })
 
+            /*  making the arrays and array of objects to use for the random product generator*/
+
             let nameSales = ['Kate','Caleb','Matilda','Marco','Ben','Josh','Artem','Zach','Ruben','Tom','Carlson'];
            let productName = [{id:"0", name:"Prizm Hobby Box", image:"images/prizm.webp"},
                               {id:"1", name:"Chronicles Hobby Box", image:"images/chronicles.jpg"}, 
@@ -55,11 +58,12 @@
             let timeArray = ['1 hour ago', '30 minutes ago', '2 hours ago', '1 minute ago', 'right now'];
 
 
-
+            /* selecting the classes to add to them in the future function*/ 
             let notificationText = document.querySelector(".custom-notification-content");
             let productPhoto = document.querySelector(".custom-notification-image-wrapper");
             let productPhotoSrc = document.querySelector(".notif-image");
 
+            /** a function that sets off every 3 seconds and stay visible for 3 seconds, generates a random fake sale */
             setInterval(function(){ $(".custom-social-proof").stop().slideToggle('slow', () => {
                 if($(".custom-social-proof").is(":hidden")){
                     let randomName = Math.floor(Math.random() * nameSales.length);
