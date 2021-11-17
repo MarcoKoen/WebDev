@@ -1,4 +1,4 @@
-
+        <!--Nav bar, seperated in 3 sections, in future would seperate into partial to use on multiple pages -->
         <div class="navbar">
             <div class="container">
                 <a class="logo" href="index.html">OceaniaBreaks</a>
@@ -31,6 +31,7 @@
             </div>
         </div>
 
+        <!-- Hero container, contains starting image and text with buttons ontop-->
         <section class="hero">
             <div class="container">
                 <img src="images/logo.jpg" alt="OceaniaBreaksLogo">
@@ -45,6 +46,7 @@
             </div>
         </section>
 
+        <!--Next layer shows the brands of products-->
         <section class="features-section">
             <div class="container">
                 <img src="images/1200px-Topps_Logo.svg.png" alt="Topps logo">
@@ -54,6 +56,7 @@
             </div>
         </section>
 
+        <!-- A simple text copying the starting website-->
         <section class="paragraph-section">
             <div class="container">
                 <ul>
@@ -63,6 +66,7 @@
             </div>
         </section>
 
+        <!--Two photos class, using partials to implement the same style of photos later on-->
         <section class="two-photos">
             <div class="container">
                 <%- include('partials/card.ejs',{"text":"Sports Sports Card Breaks","image":"merlin"}) %>
@@ -70,7 +74,8 @@
                 
             </div>
         </section>
-
+        
+        <!--Simple youtube video-->
         <section class = "youtube-videos">
             <h1>Some of our favourite football videos!</h1>
         <div class="videos">
@@ -82,7 +87,7 @@
         </div>
         </section>
 
-        
+        <!-- Imported carousel from glide, allows a structure to use built in methods and save time-->
         <section class = "carousel">
             <h1>Browse our best hits so far!</h1>
             <div class="glide">
@@ -97,6 +102,7 @@
                 </div>
         </section>
 
+        <!--Class for pop up fake notifications, to give the user a level of trust with the website-->
         <section class="custom-social-proof">
             <div class="custom-notification">
               <div class="custom-notification-container">

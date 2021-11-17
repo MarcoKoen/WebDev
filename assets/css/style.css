@@ -451,7 +451,7 @@ nav .primary-nav li a:hover{
             height: 350px;
         }
 
-        .primary-nav li:hover .dropdown__menu ul li {     
+        .primary-nav:hover .dropdown__menu ul li {     
             display: block;
             left: 0;
             top: 100%;
