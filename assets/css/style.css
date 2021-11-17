@@ -1,6 +1,4 @@
-
-
-
+/** Applies poppins to the file and general color **/
 body {
     font-family: 'Poppins', sans-serif;
     background: black;
@@ -9,16 +7,13 @@ body {
     color: white;
 }
 
+
 .secondary-nav , .primary-nav{color: black;}
 .hero img {
 width: 100%;
 height: 100%;
 }
 
-body, html {
-    height: 100%;
-
-}
 .mobile-menu{
     padding-right: 25px;
 }
@@ -30,12 +25,12 @@ body, html {
     position: fixed;
     z-index: 999;
     width: 99%;
+    height: 20px;
 }
 
 .logo {
     text-decoration: none;
     font-weight: bold;
-    font-size: 100px;
     color: black;
     font-size: 1.5em;
 }
@@ -49,7 +44,6 @@ nav {
     place-content: space-between;
 }
 .hero {
- 
     padding-top: 80px;
 }
 
@@ -58,7 +52,6 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
-    justify-content: top;
     flex-direction: column;
     position: relative;
 }
@@ -78,11 +71,7 @@ ul {
     margin: 0;
 }
 
-.hero .container {
-    position: relative;
-    
-}
-
+/**Text ontop of photo **/
 .middle-col{
     margin: 0;
     padding: 0;
@@ -95,15 +84,11 @@ ul {
     text-decoration: none;
     font-weight: 700;
     height:70%;
-
 }
-
 
 .middle-col .subhead {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-size: 25px;
-    
-
 }
 .middle-col h1  {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -119,19 +104,20 @@ ul {
     padding: .5em .5em;
     border-radius: 20em;
 }
+
+/** Product photos**/
 .features-section {
     height: 8%;
     width: 100%;
     flex-direction: row;
-    background-color: black;
-    
+    background-color: black; 
 }
 
 .features-section .container {
         display:flex;
         justify-content: space-around;
         align-items: center;
-    }
+}
 
 .features-section img {
     max-height: 100px;
@@ -146,6 +132,8 @@ ul {
     justify-content: center;
     text-align: center;
 }
+
+/**Two images showing products with text ontop, hover feature **/
 .two-photos img {
     max-width: 100%;
 }
@@ -164,7 +152,6 @@ ul {
     width: 100%;
     height: 100%;
 }
-
 
 
 .two-photos .centered {
@@ -198,7 +185,6 @@ ul {
 
 }
 
-
 .two-photos .container h1{
     position: relative;
     top: 75%;
@@ -208,6 +194,7 @@ ul {
     letter-spacing: 1px;
 }
 
+/** Mobile menu hamburger **/
 nav.menu-btn{
     display: block;
 }
@@ -243,6 +230,7 @@ nav .primary-nav li a:hover{
     cursor: pointer;
 }
 
+
 .youtube-videos{
     padding: 20px;
     display: flex;
@@ -255,12 +243,14 @@ nav .primary-nav li a:hover{
     width: 100%;
 }
 
+
 .carousel h1 {
     display: flex;
     justify-content: center;
 
 }
 
+/** imported fake sale css**/
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
 .custom-social-proof {
@@ -357,13 +347,8 @@ nav .primary-nav li a:hover{
         opacity: 1;
     }
 
-
-
-
-
-
-
-    @media screen and (min-width: 768px){
+ /**The start of desktop specific style**/
+    @media screen and (min-width: 900px){
         .mobile-menu, .mobile-menu-exit {
             display: none;
         }
@@ -451,17 +436,33 @@ nav .primary-nav li a:hover{
             height: 350px;
         }
 
-        .primary-nav:hover .dropdown__menu ul li {     
-            display: block;
+        .socials{
+            position: relative;
+        }
+
+        .dropdown__menu{
+            position:absolute;
+            display: none;
+        }
+
+        .dropdown__menu ul {
+            display: block!important;
+        }
+
+        .socials:hover  .dropdown__menu {                 
+            display:block;
             left: 0;
             top: 100%;
             background-color: white;
         }
-
-      .dropdown__menu ul li{
-          display:none ;
-      }
         
+        .socials {
+            color: black;
+            font-size: 1em;
+            padding: .1em 1em;
+        }
+        
+      
        
         
         
